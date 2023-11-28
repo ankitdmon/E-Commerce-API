@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"net/http"
 	"os"
 
@@ -21,5 +22,5 @@ func main() {
 			"message": "Hello Golang",
 		})
 	})
-	router.Run(":" + PORT)
+	log.Fatal(router.Run(":" + PORT))
 }
